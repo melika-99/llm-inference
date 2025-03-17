@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  llm-service:
+    image: llm-inference-image
+    ports:
+      - "5000:5000"
+    environment:
+      METRICS_LOG_FILE: docker_compose_inference_metrics.csv
