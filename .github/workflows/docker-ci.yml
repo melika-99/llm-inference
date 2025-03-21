@@ -25,10 +25,10 @@ jobs:
       - name: Run Test Query
         run: |
           sleep 10
-          curl -X POST -H "Content-Type: application/json" -d '{"text": "This movie was fantastic!"}' http://localhost:5000/infer
+          curl -X POST -H "Content-Type: application/json" -d '{"text": "This movie was fantastic!"}' http://127.0.0.1:5000/infer
 
       - name: Push Docker Image to Docker Hub
         run: |
-          echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-          docker tag llm-inference-image YOUR_DOCKERHUB_USERNAME/llm-inference-image:latest
-          docker push YOUR_DOCKERHUB_USERNAME/llm-inference-image:latest
+          echo "${{ secrets.Melika@docker7899 }}" | docker login -u "${{ secrets.melikaa99 }}" --password-stdin
+          docker tag llm-inference-image melikaa99/llm-inference-image:latest
+          docker push melikaa99/llm-inference-image:latest
